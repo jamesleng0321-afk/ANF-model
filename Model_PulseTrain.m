@@ -26,7 +26,7 @@ p_gL = 0.0011;
 p_Dt = 0.010;
 p_tauw1 =400e-06;
 p_tauw2 = 4500e-06;
-p_RS = 0.062/3; % Need to be changed to 0.062/3
+p_RS = 0.062; % Need to be changed to 0.062/3
 p_Threshold = 543e-6;
 p_Sigma = p_RS*p_Threshold;
 %%%%%%%%%%%%%%%%%%% Central node %%%%%%%%%%%%%%%%%%%
@@ -35,7 +35,7 @@ c_gL = 0.0027;
 c_Dt = 0.0030;
 c_tauw1 = 250e-06;
 c_tauw2 = 3000e-06;
-c_RS = 0.075/3; % Need to be changed to 0.075/3
+c_RS = 0.075; % Need to be changed to 0.075/3
 c_Threshold = 731e-6;
 c_Sigma = c_RS*c_Threshold;
 %% Model Computations %%

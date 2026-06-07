@@ -6,7 +6,7 @@ Fs = 1e6;
 NoiseAlpha = 0.8;
 
 %%%%%%%%%%% Stimulus params %%%%%%%%%%%%
-stim_rate = [100];
+stim_rate = 100;
 stim_duration = 0.3;
 stim_PPD = 40e-6;
 stim_IPG = 8e-6;

@@ -30,7 +30,7 @@ p_gL = 0.0011;
 p_Dt = 0.010;
 p_tauw1 = 400e-06;
 p_tauw2 = 4500e-06;
-p_RS = 0.062; % Need to be changed to 0.062/3
+p_RS = 0.062; 
 p_Threshold = 543e-6;
 p_Sigma = p_RS * p_Threshold;
 %%%%%%%%%%%%%%%%%%% Central node %%%%%%%%%%%%%%%%%%%
@@ -39,7 +39,7 @@ c_gL = 0.0027;
 c_Dt = 0.0030;
 c_tauw1 = 200e-06;
 c_tauw2 = 3000e-06;
-c_RS = 0.075; % Need to be changed to 0.075/3
+c_RS = 0.075;
 c_Threshold = 731e-6;
 c_Sigma = c_RS * c_Threshold;
 %% Model Computations %%
@@ -53,9 +53,6 @@ p_I = Istim * -1 ;
 p_I(p_I<0) = InhibitAlpha * p_I(p_I<0);
 p_t = 0:dt:length(p_I)/Fs;
 p_v = zeros(1,length(p_t)); p_v(:) = El;  % membrane potential vector
-% Need to randomize initial membrane potential
-% p_v(1) = El + (1.54e-3 * randn);
-
 p_sptimes=[];
 p_Noise = p_Sigma*p_Noise;
 
@@ -64,9 +61,6 @@ c_I = Istim;
 c_I(c_I<0) = InhibitAlpha * c_I(c_I<0);
 c_t = 0:dt:length(c_I)/Fs;
 c_v = zeros(1,length(c_t)); c_v(:) = El;  % membrane potential vector
-% Need to randomize initial membrane potential
-% c_v(1) = El + (1.22e-3 * randn);
-
 c_sptimes=[];
 c_Noise = c_Sigma*c_Noise;
 
