@@ -58,7 +58,7 @@ p_t = 0:dt:length(p_I)/Fs;
 p_v = zeros(1, length(p_t)); 
 p_v(:) = El;  
 % Introduce normally-distributed initial random offset
-p_v(1) = El + std_p * randn(1); 
+% p_v(1) = El + std_p * randn(1); 
 
 p_sptimes = [];
 p_Noise = p_Sigma * p_Noise;
@@ -70,7 +70,7 @@ c_t = 0:dt:length(c_I)/Fs;
 c_v = zeros(1, length(c_t)); 
 c_v(:) = El;  
 % Introduce normally-distributed initial random offset
-c_v(1) = El + std_c * randn(1); 
+% c_v(1) = El + std_c * randn(1); 
 
 c_sptimes = [];
 c_Noise = c_Sigma * c_Noise;
